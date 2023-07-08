@@ -1,0 +1,8 @@
+.spell {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  display: flex;
+}
+
+

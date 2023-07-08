@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    background: #ebecfd;
+    background: linear-gradient(90deg, #ebecfd 0%, #d7d9fa 100%);
+    position: relative;
+    padding-bottom: 40px;
+}

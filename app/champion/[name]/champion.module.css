@@ -1,0 +1,12 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}

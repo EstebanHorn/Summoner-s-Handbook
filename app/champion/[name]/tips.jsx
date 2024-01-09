@@ -17,7 +17,7 @@ export default function InfoChamp ({ AllyTips, EmenyTips, Lore }) {
         ))}
       </ul>
       <ul className='bg-gradient-to-r from-c3 to-c4 text-c1 p-2 rounded-tr-2xl rounded-bl-2xl'>
-        <h1 className='text-c2 text-3xl text-right pr-2 mb-2'>Tips aliados</h1>
+        <h1 className='text-c2 text-3xl text-right pr-2 mb-2'>Tips Enemigos</h1>
 
         {EmenyTips.map((tip, index) => (
           <li key={index} className='mb-3'>

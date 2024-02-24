@@ -4,7 +4,7 @@ import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 
 const fetchChamps = async () => {
   return fetch(
-    'http://ddragon.leagueoflegends.com/cdn/13.13.1/data/es_ES/champion.json'
+    'http://ddragon.leagueoflegends.com/cdn/14.4.1/data/es_ES/champion.json'
   ).then((res) => res.json())
 }
 

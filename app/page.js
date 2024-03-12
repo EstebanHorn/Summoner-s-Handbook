@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 
-
 const versionFetch = async () => {
   return fetch(
     'https://ddragon.leagueoflegends.com/api/versions.json'
@@ -18,7 +17,6 @@ const fetchChamps = async () => {
 export default async function ChampionsPage () {
   const fetch = await fetchChamps()
   const champions = Object.values(fetch.data)
-
 
   return (
     <div className='flex flex-col'>

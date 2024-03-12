@@ -14,16 +14,9 @@
 }
 
 .champion:hover + .text {
-  transition-delay: 0.3s;
-  background-color: rgba(134, 142, 241, 0.8);
-  padding-right: 20px;
+  transform: translateX(20px);
 }
 
-.text:hover {
-  transition-delay: 0.3s;
-  background-color: rgba(134, 142, 241, 0.8);
-  padding-right: 20px;
-}
 
 .champion:hover {
   transform: scale(1.2);

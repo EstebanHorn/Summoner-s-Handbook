@@ -21,22 +21,22 @@ export default function Searcher ({ champs }) {
         <div className='flex justify-center items-center w-full'>
           <input
             name='Campeon'
-            className='bg-c3 rounded-xl text-sm text-c1 p-1 w-full placeholder:text-gray-200 outline-none border-2 border-c3 focus:border-2 focus:border-c2 focus:bg-c3 transition-all duration-500'
+            className='bg-black bg-opacity-70 rounded-xl text-sm text-white px-3 p-1 w-full placeholder:text-gray-200 outline-none border-2 border-white focus:border-2 focus:border-gray-300 focus:bg-black focus:bg-opacity-80 transition-all duration-300'
             onChange={(e) => setInput(e?.target?.value)}
             placeholder='Search'
           />
-          <AiOutlineSearch className='absolute right-4 text-c1' />
+          <AiOutlineSearch className='absolute right-4 text-white' />
         </div>
 
         {Input.length > 0 && (
-          <ul className='bg-c4 w-full rounded-xl py-2 mt-1 bg-opacity-80 overflow-hidden'>
+          <ul className='bg-black w-full rounded-xl py-2 mt-1 bg-opacity-60 overflow-hidden'>
             {filteredArray.map((champion) => (
               <li className='' key={champion.id}>
                 <Link
                   href={`/champion/${champion.id}`}
-                  className='flex justify-between px-4 py-1 hover:bg-c3 hover:bg-opacity-80 hover:scale-105 transition-all duration-200'
+                  className='flex items-center justify-between px-4 py-1 hover:bg-[#D4AF37] hover:bg-opacity-80 hover:scale-105 transition-all duration-200'
                 >
-                  <h1 className='text-c1 text-base'>
+                  <h1 className='text-white text-base'>
                     {champion.id.split(/(?=[A-Z])/).join(' ')}
                   </h1>
                   <img

@@ -9,13 +9,13 @@ export default function BannerChamp ({ Title, Name, Tags }) {
       }}
     >
       <h2
-        className='md:text-[20px] text-sm md:font-bold text-center w-max text-c1'
+        className='md:text-[20px] text-sm md:font-bold text-center w-max text-white'
         style={{ textShadow: '1px 1px 1px black' }}
       >
         {Title}
       </h2>
       <h1
-        className='md:text-[80px] text-4xl font-bold text-center text-c2'
+        className='md:text-[80px] text-4xl font-bold text-center text-white'
         style={{ textShadow: '-2px 2px 3px black' }}
       >
         {Name.split(/(?=[A-Z])/).join(' ')}

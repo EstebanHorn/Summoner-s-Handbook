@@ -13,6 +13,7 @@ const fetchChamp = async (name) => {
 export default async function Champion ({ params }) {
   const { name } = params
   const fetch = await fetchChamp(name)
+  console.log(name)
   const champion = fetch.data
   const championName = Object.keys(champion)[0]
   const championLore = champion[championName].lore
@@ -31,7 +32,7 @@ export default async function Champion ({ params }) {
         Name={championName}
         Tags={championTags}
       />
-      <div className='flex md:flex-row flex-col gap-10 w-full md:px-10 px-2'>
+      <div className='flex md:flex-row flex-col gap-12 w-full md:px-10 px-2'>
         <Spells
           passive={championPassive.name}
           descriptionPassive={championPassive.description}

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import styles from './spells.module.css'
 
 export default function Spells ({
   passive,
@@ -58,12 +57,12 @@ export default function Spells ({
   }
 
   return (
-    <div className='h-min md:w-1/2 bg-gradient-to-r from-c4 to-c3 p-5 rounded-tr-3xl rounded-bl-3xl'>
-      <div className='flex md:gap-10 gap-5'>
-        <div>
+    <div className='h-min md:w-1/2 bg-white bg-opacity-10 p-5 rounded-tr-3xl rounded-bl-3xl shadow-md shadow-[#D6BF73]'>
+      <div className='flex md:gap-10 gap-5 '>
+        <div className='hover:scale-105 transition-all duration-200'>
           <img
             src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/passive/${ImgPassive}`}
-            className='rounded-xl cursor-pointer border-2 border-c2'
+            className='rounded-xl cursor-pointer border-2 border-white'
             onClick={() => {
               handleSelected(descriptionPassive, passive)
               setSelectedSpell('P')
@@ -79,23 +78,23 @@ export default function Spells ({
             setSelectedSpell('Q')
           }}
           style={getSpellStyles(spellQ)}
-          className={styles.spell}
+          className='hover:scale-105 transition-all duration-200 relative cursor-pointer rounded-2xl flex'
         >
           <img
             src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/${ImgQ}.png`}
-            className='rounded-xl cursor-pointer border-2 border-c2'
+            className='rounded-xl cursor-pointer border-2 border-white'
             alt='spell q'
 
           />
           <h1
-            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-c1 font-mono'
+            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-white font-mono'
             style={{ textShadow: '4px 2px 4px black' }}
           >
             Q
           </h1>
         </div>
         <div
-          className={styles.spell}
+          className='hover:scale-105 transition-all duration-200 relative cursor-pointer rounded-2xl flex'
           onClick={() => {
             handleSelected(descriptionW, spellW)
             setSelectedSpell('W')
@@ -104,19 +103,19 @@ export default function Spells ({
         >
           <img
             src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/${ImgW}.png`}
-            className='rounded-xl cursor-pointer border-2 border-c2'
+            className='rounded-xl cursor-pointer border-2 border-white'
             alt='spell w'
 
           />
           <h1
-            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-c1 font-mono'
+            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-white font-mono'
             style={{ textShadow: '4px 2px 4px black' }}
           >
             W
           </h1>
         </div>
         <div
-          className={styles.spell}
+          className='hover:scale-105 transition-all duration-200 relative cursor-pointer rounded-2xl flex'
           onClick={() => {
             handleSelected(descriptionE, spellE)
             setSelectedSpell('E')
@@ -125,18 +124,18 @@ export default function Spells ({
         >
           <img
             src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/${ImgE}.png`}
-            className='rounded-xl cursor-pointer border-2 border-c2'
+            className='rounded-xl cursor-pointer border-2 border-white'
             alt='spell e'
           />
           <h1
-            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-c1 font-mono'
+            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-white font-mono'
             style={{ textShadow: '4px 2px 4px black' }}
           >
             E
           </h1>
         </div>
         <div
-          className={styles.spell}
+          className='hover:scale-105 transition-all duration-200 relative cursor-pointer rounded-2xl flex'
           onClick={() => {
             handleSelected(descriptionR, spellR)
             setSelectedSpell('R')
@@ -145,11 +144,11 @@ export default function Spells ({
         >
           <img
             src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/${ImgR}.png`}
-            className='rounded-xl border-2 border-c2'
+            className='rounded-xl border-2 border-white'
             alt='spell r'
           />
           <h1
-            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-c1 font-mono'
+            className='absolute md:text-6xl text-4xl font-bold select-none translate-x-1/2 translate-y-1/3 bottom-0 right-0 text-white font-mono'
             style={{ textShadow: '4px 2px 4px black' }}
           >
             R
@@ -157,11 +156,11 @@ export default function Spells ({
         </div>
       </div>
       <div className='md:py-10 py-7 px-4'>
-        <h3 className='md:text-3xl text-2xl font-bold mb-2 text-c1'>
+        <h3 className='md:text-3xl text-2xl font-bold mb-2 text-white'>
           {selectedName}
         </h3>
         <p
-          className='md:text-base text-sm text-c1'
+          className='md:text-base text-sm text-white'
           dangerouslySetInnerHTML={{ __html: selectedDescription }}
         />
       </div>
@@ -171,7 +170,7 @@ export default function Spells ({
         autoPlay
         loop
         muted
-        className='rounded-tr-3xl rounded-bl-3xl w-[70vh] m-auto mb-5 border-2 border-c2'
+        className='rounded-tr-3xl rounded-bl-3xl w-[70vh] m-auto mb-5 border-2 border-white'
         style={{ boxShadow: '-6px 9px 13px 3px rgba(0,0,0,0.5)' }}
       />
     </div>

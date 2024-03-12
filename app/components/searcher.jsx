@@ -16,8 +16,7 @@ export default function Searcher ({ champs }) {
   }, [Input, champs])
 
   return (
-    <div className='absolute md:right-5 right-2 z-20 w-1/2 md:w-auto'>
-      <label className='relative flex justify-center items-center flex-col md:w-[30vh]'>
+    <div className='md:right-5 right-2 z-20 w-1/2 md:w-auto flex flex-col my-auto'>
         <div className='flex justify-center items-center w-full'>
           <input
             name='Campeon'
@@ -25,31 +24,30 @@ export default function Searcher ({ champs }) {
             onChange={(e) => setInput(e?.target?.value)}
             placeholder='Search'
           />
-          <AiOutlineSearch className='absolute right-4 text-white' />
+          <AiOutlineSearch className='relative right-6 text-white' />
         </div>
 
-        {Input.length > 0 && (
-          <ul className='bg-black w-full rounded-xl py-2 mt-1 bg-opacity-60 overflow-hidden'>
-            {filteredArray.map((champion) => (
-              <li className='' key={champion.id}>
-                <Link
-                  href={`/champion/${champion.id}`}
-                  className='flex items-center justify-between px-4 py-1 hover:bg-[#D4AF37] hover:bg-opacity-80 hover:scale-105 transition-all duration-200'
-                >
-                  <h1 className='text-white text-base'>
-                    {champion.id.split(/(?=[A-Z])/).join(' ')}
-                  </h1>
-                  <img
-                    className='w-8'
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/champion/${champion.id}.png`}
-                    alt={champion.id}
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </label>
+      {Input.length > 0 && (
+        <ul className='bg-black w-full rounded-xl py-2 mt-1 bg-opacity-60 overflow-x-hidden '>
+          {filteredArray.map((champion) => (
+            <li className='' key={champion.id}>
+              <Link
+                href={`/champion/${champion.id}`}
+                className='flex items-center justify-between px-4 py-1 hover:bg-[#D4AF37] hover:bg-opacity-80 hover:scale-105 transition-all duration-200'
+              >
+                <h1 className='text-white text-base'>
+                  {champion.id.split(/(?=[A-Z])/).join(' ')}
+                </h1>
+                <img
+                  className='w-8'
+                  src={`http://ddragon.leagueoflegends.com/cdn/13.13.1/img/champion/${champion.id}.png`}
+                  alt={champion.id}
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

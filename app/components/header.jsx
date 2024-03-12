@@ -23,7 +23,7 @@ export default async function Header () {
 
   return (
     <div className=' w-full h-11 pb-2 bg-gradient-to-r from-[#D4AF37] via-[#D6BF73] to-[#D4AF37]'>
-      <nav className='flex items-center md:justify-center md:px-5 py-1'>
+      <nav className='flex items-start md:justify-center md:px-5 py-1'>
         <ul className='w-1/2 flex flex-wrap md:w-full'>
           {links.map(({ label, route }) => (
             <li
